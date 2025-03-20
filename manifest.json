@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "zapzap+",
+    "version": "1.0",
+  
+    "description": "Primeira extensão",
+  
+    "icons": {
+      "48": "icons/allah.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://web.whatsapp.com/*"],
+        "js": ["whatsapp.mjs"]
+      }
+    ]
+  }
+  
