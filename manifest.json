@@ -6,7 +6,7 @@
     "description": "Primeira extensão",
   
     "icons": {
-      "48": "icons/allah.png"
+      "48": "icons/allah.jpg"
     },
   
     "content_scripts": [

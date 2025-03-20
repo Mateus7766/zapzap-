@@ -7,8 +7,6 @@ const observer = new MutationObserver((mutations) => {
                 if (node.getAttribute('tabindex') == "-1" && node.getAttribute('role') == "row" && node.getAttribute('class') == "") {
                     if (!document.contains(node)) {
                         const newNode = node.cloneNode(true);
-
-
                         if (mutation.previousSibling) {
                             mutation.previousSibling.after(newNode);
                         } else if (mutation.nextSibling) {
@@ -16,13 +14,9 @@ const observer = new MutationObserver((mutations) => {
                         } else {
                             mutation.target.appendChild(newNode);
                         }
-
                         const messageNode = newNode.firstChild.firstChild.childNodes[1]
-                        // messageNode.innerHTML = "__Mensagem apagada__";
                         messageNode.style.color = "red";
                         console.log(' cebola ', messageNode)
-
-                        // console.log("Mensagem foi excluída:", newNode);
                     }
                 }
             }
